@@ -4,28 +4,21 @@ import { useQuery } from 'react-query'
 import Spinner from '../components/spinner'
 import {getUpcomingMovies} from '../api/tmdb-api'
 import AddToFavoritesIcon from "../components/cardIcons/addToFavorites";
+import { Form } from "../components/form/Form";
+import { OutputLeaderboard } from "../components/form/OutputLeaderboard";
 
 
 const UpcomingMoviesPage = (props) => {
   const {  data, error, isLoading, isError }  = useQuery('upcoming', getUpcomingMovies)
 
-   
+
 
   return (
-    
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <td> Error </td>
-            <td> Description </td>
-            <td> Name </td>
-            <td> Name </td>
-          </tr>
-        </thead>
-        </table>
+    <div align="center">
+      <Spinner/>
     </div>
-);
-};
+  );
+}
+
 
 export default UpcomingMoviesPage;

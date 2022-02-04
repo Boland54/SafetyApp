@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import ReactDOM from "react-dom";
-import TrendingPage from "./pages/trendingPage";
+import TrendingPage from "./pages/problemsPage";
 import MoviePage from "./pages/movieDetailsPage";
 import FavoriteMoviesPage from "./pages/favoriteMoviesPage"; // NEW
 import MovieReviewPage from "./pages/movieReviewPage";
@@ -13,12 +13,11 @@ import AddMovieReviewPage from './pages/addMovieReviewPage';
 import TvDetailPage from "./pages/tvDetailsPage";
 import TvPage from './pages/tvPage';
 import FavoriteTvShowPage from "./pages/favoriteTvShowPage"; // NEW
-import LoginPage from "./pages/LoginPage";
 import AuthProvider from "./contexts/authContext";
-import SignUpPage from "./pages/signUpPage";
 import PrivateRoute from "./privateRoute";
 import AuthHeader from "./authHeader"
-
+import TodoContainer from "./containers/todoContainer";
+import Form from "./components/form/Form";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -40,19 +39,17 @@ const App = () => {
     <MoviesContextProvider>
             {" "}
       <Switch>
-     <Route exact path="/trending" component={TrendingPage} />
+     <Route exact path="/todo" component={TodoContainer} />
       <Route exact path="/tv/favoritetv" component={FavoriteTvShowPage} />
       <Route exact path="/discovertv" component={TvPage} />
       <Route path="/tv/:id" component={TvDetailPage} />
       <Route exact path="/reviews/form" component={AddMovieReviewPage} />
-      <Route exact path="/login" component={LoginPage} /> 
-        <Route exact path="/SignUP" component={SignUpPage} /> 
-    <Route exact path="/upcoming" component={UpcomingMoviesPage} />
+    <Route exact path="/upcoming" component={Form} />
       <Route path="/reviews/:id" component={MovieReviewPage} />
         <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
         <Route path="/movies/:id" component={MoviePage} />
         <Route exact path="/" component={FavoriteMoviesPage} />
-        <Redirect from="*" to="/login" />
+        <Redirect from="*" to="/upcoming" />
       </Switch>
       </MoviesContextProvider>
       </AuthProvider>

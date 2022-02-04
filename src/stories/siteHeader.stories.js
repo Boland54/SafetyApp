@@ -4,6 +4,7 @@ import { MemoryRouter } from "react-router";
 
 export default {
   title: "App Header",
+    background: "#150032",
   component: SiteHeader,
   decorators: [
     (Story) => <MemoryRouter initialEntries={["/"]}>{Story()}</MemoryRouter>,

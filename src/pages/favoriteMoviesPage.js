@@ -6,6 +6,7 @@ import { getMovie } from "../api/tmdb-api";
 import Spinner from '../components/spinner';
 import RemoveFromFavorites from "../components/cardIcons/removeFromFavorites";
 import WriteReview from "../components/cardIcons/writeReview";
+import YoutubeEmbed from "../components/youtubeEmbed/YoutubeEmbed";
 
 const FavoriteMoviesPage = () => {
   const {favorites: movieIds } = useContext(MoviesContext);
@@ -28,9 +29,12 @@ const FavoriteMoviesPage = () => {
   const movies = favoriteMovieQueries.map((q) => q.data);
 
   return (
-<div>
-  <h1> Home Page </h1>
-  </div>
+    <div align="center">
+    <div className="App">
+      <h1>Safety is key</h1>
+      <YoutubeEmbed embedId="rokGy0huYEA" />
+    </div>
+    </div>
   );
 };
 

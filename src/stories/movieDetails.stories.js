@@ -6,6 +6,7 @@ import MoviesContextProvider from "../contexts/moviesContext";
 
 export default {
   title: "Movie Details Page/MovieDetails",
+  background: "#150032",
   component: MovieDetails,
   decorators: [
     (Story) => <MemoryRouter initialEntries={["/"]}>{Story()}</MemoryRouter>,

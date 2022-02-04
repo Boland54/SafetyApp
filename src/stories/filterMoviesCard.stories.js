@@ -16,6 +16,7 @@ const queryClient = new QueryClient({
 
 export default {
   title: "Home Page/FilterMoviesCard",
+  background: "#150032",
   component: FilterMoviesCard,
   decorators: [
     (Story) => <MemoryRouter initialEntries={["/"]}>{Story()}</MemoryRouter>,

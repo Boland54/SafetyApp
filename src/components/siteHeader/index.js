@@ -16,8 +16,11 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
+    background: "#150032"
   },
   offset: theme.mixins.toolbar,
+  backgroundColor: "rgb(21, 0, 50)"
+  
 }));
 
 const SiteHeader = ( { history }) => {
@@ -29,12 +32,11 @@ const SiteHeader = ( { history }) => {
   const [login, setLogin] = useState(false);  
 
   const menuOptions = [
-    { label: "Favorites", path: "/movies/favorites" },
-    { label: "Upcoming", path: "/upcoming" },
-    { label: "Trending Movies", path: "/trending" },
-    { label: "TV Shows", path: "/discovertv" },
-    { label: "Favourite Tv Shows", path: "/show/favoritetv" },
-    { label: "login", path: "/login" }
+    { label: "Home", path: "/movies/favorites" },
+    { label: "File Complaint", path: "/form" },
+    { label: "Complaints Made", path: "/todo" },
+    { label: "Accidents", path: "/discovertv" },
+    { label: "Comittee", path: "/show/favoritetv" },
 
   ];
 
@@ -56,12 +58,15 @@ const SiteHeader = ( { history }) => {
 
   return (
     <>
+   
       <AppBar position="fixed" color="secondary">
+      <div style = {{backgroundColor: "rgb(21, 0, 50)"}}>
         <Toolbar>
+        
           <Typography variant="h4" className={classes.title}>
             FYP
           </Typography>
-
+<div align = "center">
             {isMobile ? (
               <>
                 <IconButton
@@ -73,9 +78,10 @@ const SiteHeader = ( { history }) => {
                 >
                   <MenuIcon />
                 </IconButton>
+                
                 <Menu
                   id="menu-appbar"
-                  color="#1b083b"
+                  background= "#150032"
                   anchorEl={anchorEl}
                   anchorOrigin={{
                     vertical: "top",
@@ -112,9 +118,12 @@ const SiteHeader = ( { history }) => {
                 ))}
               </>
             )}
+            </div>
         </Toolbar>
+        </div>
       </AppBar>
       <div className={classes.offset} />
+     
     </>
   );
 };

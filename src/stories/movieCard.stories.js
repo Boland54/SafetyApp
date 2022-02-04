@@ -8,6 +8,7 @@ import AddToFavoritesIcon from "../components/cardIcons/addToFavorites";
 
 export default {
   title: "Home Page/MovieCard",
+  background: "#150032",
   component: MovieCard,
   decorators: [
     (Story) => <MemoryRouter initialEntries={["/"]}>{Story()}</MemoryRouter>,

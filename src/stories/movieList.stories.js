@@ -9,6 +9,7 @@ import MoviesContextProvider from "../contexts/moviesContext";
 
 export default {
   title: "Home Page/MovieList",
+  background: "#150032",
   component: MovieList,
   decorators: [
     (Story) => <MemoryRouter initialEntries={["/"]}>{Story()}</MemoryRouter>,
