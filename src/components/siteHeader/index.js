@@ -48,12 +48,6 @@ const SiteHeader = ( { history }) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleLogin =   () => {
-    setLogin(!login);
-     }
- 
-   var buttonText ="Login"
-   if (login) { buttonText = "Logout" }
    
 
   return (

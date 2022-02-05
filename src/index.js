@@ -3,9 +3,6 @@ import ReactDOM from "react-dom";
 import SiteHeader from './components/siteHeader';
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from 'react-query/devtools'
-import AuthProvider from "./contexts/authContext";
-import PrivateRoute from "./privateRoute";
-import AuthHeader from "./authHeader"
 import TodoContainer from "./containers/todoContainer";
 import Form from "./components/form/Form";
 import HomePage from "./pages/homePage";
@@ -26,9 +23,7 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
     <BrowserRouter>
-    <AuthProvider>
       <SiteHeader />
-      <AuthHeader />     {/* New Header  */}
       <Switch>
       <Route exact path="/comittee" component={ComitteePage} />
       <Route exact path="/accidents" component={AccidentsPage} />
@@ -37,7 +32,6 @@ const App = () => {
       <Route path="/home" component={HomePage} />
         <Redirect from="*" to="/home" />
       </Switch>
-      </AuthProvider>
       </BrowserRouter>
     <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
