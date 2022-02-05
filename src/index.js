@@ -1,23 +1,16 @@
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import ReactDOM from "react-dom";
-import TrendingPage from "./pages/problemsPage";
-import MoviePage from "./pages/movieDetailsPage";
-import FavoriteMoviesPage from "./pages/favoriteMoviesPage"; // NEW
-import MovieReviewPage from "./pages/movieReviewPage";
 import SiteHeader from './components/siteHeader';
-import UpcomingMoviesPage from "./pages/upcomingMoviesPage";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from 'react-query/devtools'
-import MoviesContextProvider from "./contexts/moviesContext";
-import AddMovieReviewPage from './pages/addMovieReviewPage';
-import TvDetailPage from "./pages/tvDetailsPage";
-import TvPage from './pages/tvPage';
-import FavoriteTvShowPage from "./pages/favoriteTvShowPage"; // NEW
 import AuthProvider from "./contexts/authContext";
 import PrivateRoute from "./privateRoute";
 import AuthHeader from "./authHeader"
 import TodoContainer from "./containers/todoContainer";
 import Form from "./components/form/Form";
+import HomePage from "./pages/homePage";
+import AccidentsPage from "./pages/accidentsPage";
+import ComitteePage from "./pages/comitteePage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -36,22 +29,14 @@ const App = () => {
     <AuthProvider>
       <SiteHeader />
       <AuthHeader />     {/* New Header  */}
-    <MoviesContextProvider>
-            {" "}
       <Switch>
+      <Route exact path="/comittee" component={ComitteePage} />
+      <Route exact path="/accidents" component={AccidentsPage} />
      <Route exact path="/todo" component={TodoContainer} />
-      <Route exact path="/tv/favoritetv" component={FavoriteTvShowPage} />
-      <Route exact path="/discovertv" component={TvPage} />
-      <Route path="/tv/:id" component={TvDetailPage} />
-      <Route exact path="/reviews/form" component={AddMovieReviewPage} />
-    <Route exact path="/upcoming" component={Form} />
-      <Route path="/reviews/:id" component={MovieReviewPage} />
-        <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
-        <Route path="/movies/:id" component={MoviePage} />
-        <Route exact path="/" component={FavoriteMoviesPage} />
-        <Redirect from="*" to="/upcoming" />
+    <Route exact path="/form" component={Form} />
+      <Route path="/home" component={HomePage} />
+        <Redirect from="*" to="/home" />
       </Switch>
-      </MoviesContextProvider>
       </AuthProvider>
       </BrowserRouter>
     <ReactQueryDevtools initialIsOpen={false} />

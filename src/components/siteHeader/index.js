@@ -32,11 +32,11 @@ const SiteHeader = ( { history }) => {
   const [login, setLogin] = useState(false);  
 
   const menuOptions = [
-    { label: "Home", path: "/movies/favorites" },
+    { label: "Home", path: "/home" },
     { label: "File Complaint", path: "/form" },
     { label: "Complaints Made", path: "/todo" },
-    { label: "Accidents", path: "/discovertv" },
-    { label: "Comittee", path: "/show/favoritetv" },
+    { label: "Accidents", path: "/accidents" },
+    { label: "Comittee", path: "/comittee" },
 
   ];
 
