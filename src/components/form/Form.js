@@ -12,8 +12,6 @@ export default function Form(){
         phone: "",
     })
 
-    const [count, setCount] = useState(1)
-
     const updateForm = (e) => {
         setForm ({
             ...form,

@@ -1,9 +1,10 @@
 import React from "react";
-import { useQuery } from 'react-query'
+import { useQuery } from 'react-query';
 
 
 
-const TrendingMovies = (props) => {
+
+const Problem = (props) => {
   const {  data, error, isLoading, isError }  = useQuery('problems')
 
 
@@ -15,4 +16,4 @@ const TrendingMovies = (props) => {
 );
 };
 
-export default TrendingMovies;
+export default Problem;

@@ -8,6 +8,7 @@ import Form from "./components/form/Form";
 import HomePage from "./pages/homePage";
 import AccidentsPage from "./pages/accidentsPage";
 import ComitteePage from "./pages/comitteePage";
+import ProblemsPage from "./pages/problemsPage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -25,12 +26,13 @@ const App = () => {
     <BrowserRouter>
       <SiteHeader />
       <Switch>
+      <Route exact path="/problems" component={ProblemsPage} />
       <Route exact path="/comittee" component={ComitteePage} />
       <Route exact path="/accidents" component={AccidentsPage} />
      <Route exact path="/todo" component={TodoContainer} />
     <Route exact path="/form" component={Form} />
       <Route path="/home" component={HomePage} />
-        <Redirect from="*" to="/home" />
+        <Redirect from="*" to="/home"/>
       </Switch>
       </BrowserRouter>
     <ReactQueryDevtools initialIsOpen={false} />
