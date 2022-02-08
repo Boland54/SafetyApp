@@ -9,6 +9,7 @@ import HomePage from "./pages/homePage";
 import AccidentsPage from "./pages/accidentsPage";
 import ComitteePage from "./pages/comitteePage";
 import ProblemsPage from "./pages/problemsPage";
+import Footer from "./components/footer";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -34,9 +35,12 @@ const App = () => {
       <Route path="/home" component={HomePage} />
         <Redirect from="*" to="/home"/>
       </Switch>
+      
       </BrowserRouter>
+      
     <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
+    
 
   );
 };
