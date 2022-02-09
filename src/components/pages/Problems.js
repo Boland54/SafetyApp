@@ -6,24 +6,25 @@ function Problems() {
     <div className="page-heading">
     <table className="table1">
         <tr>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Gender</th>
+          <th>Fixed?</th>
+          <th>Problem</th>
+          <th>Location</th>
         </tr>
         <tr>
-          <td>Anom</td>
-          <td>19</td>
-          <td>Male</td>
+          <td>Yes</td>
+          <td>Broken light</td>
+          <td>3rd flooor</td>
         </tr>
         <tr>
-          <td>Megha</td>
-          <td>19</td>
-          <td>Female</td>
+          <td>No
+          </td>
+          <td>Leak in a pipe</td>
+          <td>Builing B block A</td>
         </tr>
         <tr>
-          <td>Subham</td>
-          <td>25</td>
-          <td>Male</td>
+          <td>No</td>
+          <td>Door Handle loose</td>
+          <td>Canteen</td>
         </tr>
       </table>
     </div>
