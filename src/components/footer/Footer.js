@@ -1,10 +1,10 @@
 import React from "react";
-import "./probCSS.css"
+import "./Footer.css";
 
-function Problems() {
+function Footer() {
   return (
-    <div className="page-heading">
-    <table className="table1">
+    <div className="main-footer">
+     <table>
         <tr>
           <th>Name</th>
           <th>Age</th>
@@ -26,8 +26,15 @@ function Problems() {
           <td>Male</td>
         </tr>
       </table>
-    </div>
+        <div className="row">
+          <p className="col-sm">
+            &copy;{new Date().getFullYear()} Safety App | All rights reserved |
+            Terms Of Service | Privacy
+          </p>
+        </div>
+        </div>
+
   );
 }
 
-export default Problems;
+export default Footer;

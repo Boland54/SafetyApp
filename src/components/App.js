@@ -7,6 +7,8 @@ import Problems from "./pages/Problems";
 import Accidents from "./pages/Accidents";
 import "./App.css";
 import Form from "./report/Form";
+import Footer from "./footer/Footer";
+
 
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
     <div className="container">
       <Router>
         <Navbar />
+
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/form" exact component={Form} />
@@ -22,10 +25,12 @@ function App() {
           <Route path="/accidents" exact component={Accidents} />
           <Route path="/committee" exact component={Committee} />
         </Switch>
+        <Footer />
 
       </Router>
-  
+   
     </div>
+    
           
   );
 }
