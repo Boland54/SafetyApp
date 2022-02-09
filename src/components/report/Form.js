@@ -56,7 +56,7 @@ export default function Form(){
         
         e.target.reset();
 
-        history.push("/portfolio")     //onSubmit redirect to a new page
+        history.push("/problems")     //onSubmit redirect to a new page
     }
 
 
