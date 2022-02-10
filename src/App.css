@@ -18,37 +18,37 @@
 }
 
 .report {
-  background-image: url('/images/img-2.jpg');
+  background-color: #fff;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  color: #000000;
   font-size: 100px;
 }
 
 .problem {
-  background-image: url('/images/img-1.jpg');
+  background-color: #fff;
   background-position: center;
-  background-size: fill;
+  background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  color: #000000;
   font-size: 100px;
 }
 
 .accidents {
-  background-image: url('/images/img-8.jpg');
+  background-color: #fff;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  color: #000000;
   font-size: 100px;
 }
 
 .committee {
-  background-image: url('/images/img-8.jpg');
+  background-color: #fff;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  color: #000000;
   font-size: 100px;
 }
