@@ -1,10 +1,6 @@
-import React from "react";
-function Accidents() {
-  return (
-    <div className="page-heading">
-      <h1>Accidents</h1>
-    </div>
-  );
-}
+import React from 'react';
+import '../../App.css';
 
-export default Accidents;
+export default function Accidents() {
+  return <h1 className='accidents'>Accidents</h1>;
+}

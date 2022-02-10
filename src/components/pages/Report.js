@@ -1,11 +1,6 @@
-import React from "react";
+import React from 'react';
+import '../../App.css';
 
-function Report() {
-  return (
-    <div className="page-heading">
-      <h1> Report a Problem</h1>
-    </div>
-  );
+export default function Report() {
+  return <h1 className='report'>Report</h1>;
 }
-
-export default Report;

@@ -1,10 +1,16 @@
-import React from "react";
+import React from 'react';
+import '../../App.css';
+import Cards from '../Cards';
+import HeroSection from '../HeroSection';
+import Footer from '../Footer';
+
 function Home() {
   return (
-    <div className="page-heading">
-      <h1>This is a Safety App</h1>
-      <p>Click the link to report a problem</p>
-    </div>
+    <>
+      <HeroSection />
+      <Cards />
+      <Footer />
+    </>
   );
 }
 

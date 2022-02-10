@@ -1,10 +1,6 @@
-import React from "react";
-function Committee() {
-  return (
-    <div className="page-heading">
-      <h1>Committee</h1>
-    </div>
-  );
-}
+import React from 'react';
+import '../../App.css';
 
-export default Committee;
+export default function Committee() {
+  return <h1 className='committee'>COMMITTEE</h1>;
+}
