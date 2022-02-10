@@ -5,8 +5,8 @@ import './form.css';
 export default function Form(){
 
     const [form, setForm] = useState({
-        name: "",
-        phone: "",
+        prob: "",
+        location: "",
     })
 
     const [count, setCount] = useState(1)
@@ -68,36 +68,24 @@ export default function Form(){
 
             <form onSubmit = { sendEmail }>
 
-
                 <div className = "field4">
-                
-
- 
-                <input 
-                    type ="text" 
-                    className = "form-input"
-                    name ="designText" 
-                    placeholder="Exact copy (words) in the design"
-                    onChange ={updateForm} 
-                    value = {form.designText}
-                />
 
                 <input 
                     type ="text" 
                     className = "form-input"
-                    name ="budget" 
-                    placeholder="Budget"
+                    name ="prob" 
+                    placeholder="prob"
                     onChange ={updateForm} 
-                    value = {form.budget}
+                    value = {form.prob}
                 />
 
                 <textarea 
                     type ="text" 
                     className = "form-input"
-                    name ="comment" 
-                    placeholder="Comments"
+                    name ="location" 
+                    placeholder="location"
                     onChange ={updateForm} 
-                    value = {form.comment}
+                    value = {form.location}
                 />
                 </div>
                 

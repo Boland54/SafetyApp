@@ -9,7 +9,7 @@
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 650px;
+  height: 750px;
   position: relative;
   
 }
@@ -31,6 +31,13 @@
   background: rgba(0, 0, 0, 0.5);
   padding: 0px 20px;
   border-radius: 2px;
+}
+
+.page-heading p {
+  font-size: 5rem;
+  color: #fff;
+  font-weight: 300;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (max-width: 600px) {
